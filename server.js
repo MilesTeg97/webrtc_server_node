@@ -28,7 +28,7 @@ const STR_INVALID_TRANSFER_MODE = 'Invalid transfer mode, must be text';
 
 
 
-console. log('Initialising Node...')
+console.log('Initialising Node...')
 
 /*
 var http = require('http');
@@ -303,7 +303,7 @@ wss.on('connection', (ws) => {
 	});
 });
 
-console. log('Done! Signaling server is now listening on Port:' + PORT )
+console.log('Done! Signaling server is now listening on Port:' + PORT )
 
 
 const interval = setInterval(() => { // eslint-disable-line no-unused-vars

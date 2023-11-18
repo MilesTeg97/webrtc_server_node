@@ -6,8 +6,11 @@
   "dependencies": {
     "ws": "^7.0.0"
   },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
   "scripts": {
-    "start": "node server.js"
+    "test": "eslint server.js && echo \"Lint OK\" && exit 0"
   },
   "author": "Fabio Alessandrelli",
   "license": "MIT"

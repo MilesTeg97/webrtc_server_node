@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 const crypto = require('crypto');
-const PORT = process.env.PORT || 9080;
+const PORT = process.env.PORT || 10000;
 
 const MAX_PEERS = 256;
 const MAX_LOBBIES = 64;

@@ -26,17 +26,8 @@ const STR_INVALID_CMD = 'Invalid command';
 const STR_TOO_MANY_PEERS = 'Too many peers connected';
 const STR_INVALID_TRANSFER_MODE = 'Invalid transfer mode, must be text';
 
-
-
 console.log('Initialising Node...')
 
-
-let crypto;
-try {
-  crypto = require('node:crypto');
-} catch (err) {
-  console.error('crypto support is disabled!');
-} 
 
 /*
 var http = require('http');

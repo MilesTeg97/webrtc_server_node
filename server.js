@@ -30,6 +30,14 @@ const STR_INVALID_TRANSFER_MODE = 'Invalid transfer mode, must be text';
 
 console.log('Initialising Node...')
 
+
+let crypto;
+try {
+  crypto = require('node:crypto');
+} catch (err) {
+  console.error('crypto support is disabled!');
+} 
+
 /*
 var http = require('http');
 http.createServer(function (req, res) {

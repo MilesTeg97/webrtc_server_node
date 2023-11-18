@@ -1,9 +1,9 @@
 const WebSocket = require('ws');
 const crypto = require('crypto');
+const PORT = process.env.PORT || 9080;
 
 const MAX_PEERS = 256;
 const MAX_LOBBIES = 64;
-const PORT = 9080;
 const ALFNUM = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
 const NO_LOBBY_TIMEOUT = 1000;
@@ -27,9 +27,11 @@ const STR_TOO_MANY_PEERS = 'Too many peers connected';
 const STR_INVALID_TRANSFER_MODE = 'Invalid transfer mode, must be text';
 
 
-var http = require('http');
+
 console. log('Initialising Node...')
 
+/*
+var http = require('http');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.write('You sucessfully connected to Port ');
@@ -37,6 +39,7 @@ http.createServer(function (req, res) {
   res.end('!\n Your node js Signal Server for Godot is most likely up and running!');
   
 }).listen(PORT+1);
+*/
 
 const CMD = {
 	JOIN: 0, // eslint-disable-line sort-keys
@@ -300,7 +303,8 @@ wss.on('connection', (ws) => {
 	});
 });
 
-console. log('Done! Signaling server is now listening...')
+console. log('Done! Signaling server is now listening on Port:' + PORT )
+
 
 const interval = setInterval(() => { // eslint-disable-line no-unused-vars
 	wss.clients.forEach((ws) => {
